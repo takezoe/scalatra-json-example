@@ -2,14 +2,21 @@
 
 ## Build & Run ##
 
+First, start the application:
+
 ```sh
-$ cd my-scalatra-web-app
-$ sbt
-> jetty:start
+$ sbt ~jetty:start
 ```
 
-Send a request as follows:
+Then, send a request from the another console:
 
-```
+```sh
 $ curl -XPOST 'http://localhost:8080/my/endpoint' -H 'Content-Type: application/json' -d'{"name": "Scalatra"}'
 ```
+
+As a result, the following line would be displayed on the first console:
+
+```
+My name is Scalatra
+```
+
